@@ -1,0 +1,454 @@
+    /* Font style  */
+
+    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap'); 
+ 
+    /* Universal Selector  */ 
+ 
+    *{ 
+        padding:0px; 
+        margin:0px; 
+        box-sizing:border-box; 
+    } 
+ 
+    /* variable  */ 
+    :root{ 
+         
+        /* --linear:linear-gradient(90deg, white 65%, black 35%); */ 
+        /* --double:linear-gradient(90deg, black 30%, white 10%); */ 
+        --text:45px;  
+        --txt:24px; 
+        --text1:60px; 
+        --txt1:20px; 
+        --word:8px; 
+        --space:10px 20px; 
+        --font:"Abril Fatface", serif; 
+        --weight: 400; 
+        --wcolor:white; 
+        --bcolor:black; 
+    } 
+ 
+ 
+    /* scroll Animation for pages  */ 
+ 
+   @view-transition { 
+    navigation: auto; 
+} 
+ 
+/* HOME PAGE LEFT to RIGHT */ 
+::view-transition-old(root) { 
+    animation: home-out 2s ease both; 
+} 
+ 
+/* ABOUT PAGE RIGHT to CENTER */ 
+::view-transition-new(root) { 
+    animation: about-in 2s ease both; 
+} 
+ 
+ 
+/* HOME: LEFT  RIGHT */ 
+@keyframes home-out { 
+    from { 
+        transform: translateX(0); 
+    } 
+ 
+    to { 
+        transform: translateX(100%); 
+    } 
+} 
+ 
+ 
+/* ABOUT: RIGHT  CENTER */ 
+@keyframes about-in { 
+    from { 
+        transform: translateX(100%); 
+    } 
+ 
+    to { 
+        transform: translateX(0); 
+    } 
+}
+
+
+
+/* ================= CONTACT PAGE ================= */
+/* Contact page */
+
+.container{
+
+    width:100%;
+    min-height:150vh;
+    position:relative;
+    overflow:hidden;
+
+}
+
+
+/* CONTACT heading */
+
+.text{
+
+    font-family:var(--font);
+    font-weight:var(--weight);
+    font-size:100px;
+    letter-spacing:20px;
+    margin-top:40px;
+    margin-left:40px;
+    color:black;
+   
+}
+
+.text1{
+
+    font-family:var(--font);
+    font-weight:var(--weight);
+    font-size:100px;
+    letter-spacing:20px;
+    margin-top:40px;
+    margin-left:15px;
+    color:rgb(255, 251, 251);
+   
+}
+
+
+/* Photo */
+
+.photo{
+
+    width:500px;
+    height:600px;
+    object-fit:cover;
+    margin-top:40px;
+    margin-left:40px;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.979),0 6px 20px 0 rgba(255, 252, 252, 0.19);
+    border:5px solid black;
+    background-color:white;
+    border-radius: 30px;
+    position: relative;
+    z-index:3;
+
+}
+
+
+/* Left side Box  */
+
+section{
+
+    width:72%;
+    height:100%;
+    position:absolute;
+
+    top:0px;
+
+    right:0px;
+
+    
+    background-color:black;
+    animation-name:moving;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    /* animation-delay: 2s; */
+
+}
+
+@keyframes moving {
+    
+    from{
+        right:-100%
+    }
+
+    to{
+        right:0px;
+    }
+}
+
+
+
+
+
+/* Contact Form */
+
+form{
+
+    width:600px;
+     
+
+    display:flex;
+     justify-content:center;
+     align-items: center;
+    flex-direction:column;
+
+    gap:50px;
+    position:absolute;
+
+    top:225px;
+
+    right:80px;
+
+    
+
+}
+
+
+
+
+/* Form heading */
+
+form h2{
+
+    font-family:var(--font);
+
+    font-size:35px;
+
+    letter-spacing:3px;
+
+    color:white;
+
+    margin-bottom:20px;
+
+}
+
+
+/* Input fields */
+
+form input{
+
+    width:100%;
+
+    height:70px;
+
+    padding:10px 15px;
+
+    font-size:18px;
+
+    border:1px solid white;
+    color:white;
+    outline:none;
+
+    border-radius:15px;
+    background-color: transparent;
+
+}
+
+
+/* Message box */
+
+form textarea{
+
+    width:100%;
+
+    height:200px;
+
+    padding:15px;
+
+    font-size:18px;
+
+    border:1px solid white;
+    border-radius:15px;
+    outline:none;
+    color:white;
+    resize:none;
+     background-color:transparent;    
+
+
+}
+
+
+/* Send button */
+
+form button{
+
+    width:180px;
+
+    height:50px;
+
+    background-color:white;
+
+    color:black;
+
+
+    font-size:20px;
+    border-radius: 50px;
+    cursor:pointer;
+    border:2px solid rgba(231, 213, 213, 0.938);
+
+}
+
+form button:hover{
+
+    transform:scale(1.03);
+
+    border:3px solid rgb(248, 200, 200);
+
+    box-shadow:0px 5px 15px rgba(248, 200, 200,0.3);
+
+}
+
+form input:hover,
+form textarea:hover{
+
+    transform:scale(1.03);
+
+    border:2px solid white;
+
+    box-shadow:0px 5px 15px rgba(255,255,255,0.3);
+
+}
+
+ 
+.home {
+
+    height:80px;
+    width:80px;
+    border-radius:50%;
+    background-color:transparent;
+    box-shadow:0px 5px 15px rgba(255,255,255,0.3);
+    position:absolute;
+        bottom: 18px;
+    right: 62px;
+    border:0px;
+    font-size:35px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+
+}
+
+.home:hover{
+
+    transform:scale(1.03);
+
+    border:2px solid white;
+
+   
+
+
+}
+
+.link {
+    height: 100px;
+    width: 462px;
+    background-color:#a6aacc;
+    opacity: 0.9;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 665px;
+    left: -318px;
+    z-index: 10;
+}
+
+h1 a{
+
+    text-decoration:none;
+    color: #000;
+}
+
+/* Media Query  */
+
+@media only screen and (min-width:986px) and (max-width:1329px) {
+    
+
+    .container{
+
+        min-height:180vh;
+    }
+
+    section{
+
+        width:70%;
+
+    }
+
+
+    form {
+    width: 391px;
+        right: 30px;
+         gap: 36px;
+
+    }
+
+
+    .home{
+
+        right:37px;
+    height: 72px;
+    width: 72px;
+    }
+
+    .link{
+
+            left: -237px;
+
+    }
+
+}
+
+
+/* Media Query  */
+
+/* Tab Screen  */
+
+@media only screen and (min-width:600px) and (max-width:986px){
+
+    .text{
+
+            font-size: 45px;
+
+    }
+
+    .text1{
+
+            font-size: 45px;
+
+    }
+
+    .photo {
+    width: 260px;
+    height: 488px;
+    }   
+
+    .photo img {
+
+            height: 425px;
+    position: absolute;
+  top: 37px;
+    right: -23px;               
+    }
+
+    form {
+    width: 251px;
+    gap: 40px;
+    right: 24px;
+    top: 147px;
+
+    }
+
+    form textarea {
+    
+    height: 123px;
+    }
+
+    .link {
+    height: 67px;
+    width: 236px;
+    top: 515px;
+    left: -124px;
+
+    }
+
+    h1 a{
+
+            font-size: 19px;
+
+    }
+
+    .home {
+    height: 60px;
+    width: 75px;
+    bottom: 9px;
+    right: 28px;
+    }
+}
