@@ -391,7 +391,7 @@ h1 a{
 
 /* Tab Screen  */
 
-@media only screen and (min-width:600px) and (max-width:986px){
+@media only screen and (min-width:661px) and (max-width:986px){
 
     .text{
 
@@ -451,4 +451,79 @@ h1 a{
     bottom: 9px;
     right: 28px;
     }
+}
+
+/* Phone screen  */
+
+@media only screen and (min-width:300px) and (max-width:660px){
+
+
+   
+.container {
+    
+    min-height: 300vh;
+    
+}
+
+    
+.text {
+    font-family: var(--font);
+    font-weight: var(--weight);
+    font-size: 32px;
+    letter-spacing: 5px;
+    margin-left: 30px;
+
+
+
+}
+
+.photo {
+    width: 243px;
+       height: 531px;
+
+
+}
+
+.photo img{
+
+    height: 438px;
+    position: absolute;
+    top: 50px;
+    left: -48px;
+}
+
+.text1{
+
+    display:none;
+}
+
+section {
+    width: 100%;
+    top: 459px;
+
+}
+
+form {
+    width: 205px;
+
+}
+
+
+.link {
+    height: 73px;
+    width: 202px;
+           top: 385px;
+        left: 7px;
+
+}
+
+h1 a{
+
+    font-size:16px;
+}
+
+.home{
+
+    top: 64%;
+}
 }
